@@ -4,19 +4,18 @@
 
 source("jserver.R")
 
-p = function(x){print(x)}
-pi = function(x,y){p(identical(x,y))}
-ps = function(x){
+pid = function(x,y){print(identical(x,y))}
+psg = function(x){
  Jset("abc",x)
- pi(x,Jget("abc"))
+ pid(x,Jget("abc"))
 }
 
 Jinit();
 
 a=Jexec("2 3$0 1 0 0 0 1")
-pi(a,matrix(c(FALSE,TRUE,FALSE,FALSE,FALSE,TRUE),nrow=2))
+pid(a,matrix(c(FALSE,TRUE,FALSE,FALSE,FALSE,TRUE),nrow=2))
 
-ps(c(2.7,88.123))
-ps(0.1 * matrix(1:6,nrow=3))
-ps("hello world")
+psg(c(2.7,88.123))
+psg(0.1 * matrix(1:6,nrow=3))
+psg("hello world")
 

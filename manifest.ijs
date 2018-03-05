@@ -10,16 +10,14 @@ For more information, see wiki page http://code.jsoftware.com/wiki/Interfaces/R/
 
 LABCATEGORY=: 'Stats'
 
-VERSION=: ''
+VERSION=: '1.0.1'
 
 RELEASE=: 'j807'
 
 FILES=: 0 : 0
 readme.txt
 jserver.R
+jserverdemo.R
 jservertest.R
+lib/
 )
-
-FILESLINUX=: 'lib/libjserver4R.so'
-FILESDARWIN=: 'lib/libjserver4R.dylib'
-FILESWIN=: 'lib/libjserver4R.dll'
