@@ -18,5 +18,8 @@ FILES=: 0 : 0
 readme.txt
 jserver.R
 jservertest.R
-lib/
 )
+
+FILESLINUX=: 'lib/libjserver4R.so'
+FILESDARWIN=: 'lib/libjserver4R.dylib'
+FILESWIN=: 'lib/libjserver4R.dll'
