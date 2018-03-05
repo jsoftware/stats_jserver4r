@@ -13,7 +13,7 @@ ps = function(x){
 
 Jinit();
 
-a=Jcmd("2 3$0 1 0 0 0 1")
+a=Jexec("2 3$0 1 0 0 0 1")
 pi(a,matrix(c(FALSE,TRUE,FALSE,FALSE,FALSE,TRUE),nrow=2))
 
 ps(c(2.7,88.123))

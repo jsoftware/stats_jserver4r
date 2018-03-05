@@ -1,9 +1,10 @@
 # J server for R utilities
 # ensure the shared object is accessible
 
-Jcmd = function(exp) { .Call("rjcmd",exp) }
 Jdo = function(exp) { .Call("rjdo",exp) }
+Jexec = function(exp) { .Call("rjexec",exp) }
 Jget = function(name) { .Call("rjget",name) }
+Jgetr = function(name) { .Call("rjgetr") }
 Jset = function(name,value) { .Call("rjset",name,value) }
 
 # Jinit - the optional argument is the full pathname of a
