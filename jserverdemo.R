@@ -21,7 +21,15 @@ cat(Jgetr())
 
 Jexec("+/mat")           # confirms the matrix is in row order
 
+(v=c("hello","world"))   # R character vector
+Jset("vec",v)
+identical(v,Jget("vec")) # J returns the same character vector
+
+Jdo("vec")               # J stores the character vector as a boxed list
+cat(Jgetr())
+
+Jexec("2.1;'hello';i.3") # a J boxed list that is not all strings is returned as an R list
+
 Jrun()                   # this runs an interactive REPL
 
 Jget("A")                # read value set in REPL
-
