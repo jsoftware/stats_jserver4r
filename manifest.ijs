@@ -14,6 +14,8 @@ VERSION=: '1.0.4'
 
 RELEASE=: 'j807'
 
+FOLDER=: 'stats/jserver4r'
+
 FILES=: 0 : 0
 readme.txt
 jserver.R
