@@ -81,7 +81,6 @@ A mallocB(I len, I count)
 A sexp2j(SEXP s)
 {
   int type = TYPEOF(s);
-// printf("sexp2j type=%s\n",type2name(type));
 // *INDENT-OFF*
   switch (type) {
   case CHARSXP : return set_char(s);

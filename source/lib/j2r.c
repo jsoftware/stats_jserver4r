@@ -35,7 +35,12 @@ SEXP j2sexp(I t,I r,I*s,I*d)
 // ---------------------------------------------------------------------
 C* box2char(B b)
 {
-  return (C*)((b->s) + (I)(b->r));
+  I *s = b->s;
+  I len = s[0];
+  C* d = (C*)(s + (I)(b->r));
+  C* m=calloc(len+1, sizeof(char));
+  strncpy(m,d,len);
+  return m;
 }
 
 // ---------------------------------------------------------------------
@@ -81,7 +86,9 @@ SEXP get_boxed(I r,I*s,I*d)
   } else {
     PROTECT(n = allocVector(STRSXP, len));
     DO(len,
-       char *buffer=strdup(box2char(b[i]));
+       int r = b[i]->r;
+       if (r>1) return rank_notyet(2,r);
+       char *buffer=box2char(b[i]);
        SET_STRING_ELT(n,i,mkChar(buffer));
        free(buffer););
   }
@@ -93,7 +100,12 @@ SEXP get_boxed(I r,I*s,I*d)
 SEXP get_char(I r,I*s,I*d)
 {
   if (r>1) return rank_notyet(2,r);
-  return string2sexp((char*)(d));
+  int len = s[0];
+  C* m=calloc(len+1, sizeof(char));
+  strncpy(m,(char *)d,len);
+  SEXP res = string2sexp(m);
+  free(m);
+  return res;
 }
 
 // ---------------------------------------------------------------------
