@@ -30,6 +30,7 @@ cat(Jgetr())
 
 Jexec("2.1;'hello';i.3") # a J boxed list that is not all strings is returned as an R list
 
-Jrun()                   # this runs an interactive REPL
-
-Jget("A")                # read value set in REPL
+# Jrun()                  runs an interactive REPL
+# A=: i.2 3 4             assign in REPL
+# ....                    exit REPL
+# Jget("A")               example of read value set in REPL

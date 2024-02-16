@@ -10,9 +10,9 @@ For more information, see wiki page http://code.jsoftware.com/wiki/Interfaces/R/
 
 LABCATEGORY=: 'Stats'
 
-VERSION=: '1.0.5'
+VERSION=: '1.0.6'
 
-RELEASE=: 'j807'
+RELEASE=: 'j901'
 
 FOLDER=: 'stats/jserver4r'
 

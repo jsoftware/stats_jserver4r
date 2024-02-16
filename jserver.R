@@ -2,24 +2,24 @@
 # update this to define full paths to J bin folder, shared library, and profile:
 
 # typical for windows install in home
-pathbin= "c:/users/chris/j64-807/bin"
+pathbin= "c:/users/chris/j9.5/bin"
 pathdll= paste(pathbin,"/j.dll",sep="")
 pathpro= paste(pathbin,"/profile.ijs",sep="")
 
 # typical for linux install in home
-#pathbin= "/home/chris/j64-807/bin"
+#pathbin= "/home/chris/j9.5/bin"
 #pathdll= paste(pathbin,"/libj.so",sep="")
 #pathpro= paste(pathbin,"/profile.ijs",sep="")
 
 # typical for macos install in home
-#pathbin= "/Users/chris/j64-807/bin"
+#pathbin= "/Users/chris/j9.5/bin"
 #pathdll= paste(pathbin,"/libj.dylib",sep="")
 #pathpro= paste(pathbin,"/profile.ijs",sep="")
 
 # typical for debian install
 # pathbin= "/usr/bin"
-# pathdll= "libj.so.8.07"
-# pathpro= "/etc/j/8.07/profile.ijs"
+# pathdll= "libj.so.9.5"
+# pathpro= "/etc/j/9.5/profile.ijs"
 
 # ------------------------------------------------
 # customize the following and add any enhancements as required:
