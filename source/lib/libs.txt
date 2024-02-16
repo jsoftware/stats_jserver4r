@@ -1,11 +1,11 @@
 
 The distributed binaries were built on:
 
-* Linux Mint 18.3 (=Ubuntu 16.04), R 3.2.3
+* Linux Mint 21.2 (=Ubuntu 22.04), R 4.1.2
 
 * Linux aarch64, R 3.1.1
 
-* macOS Sierra 10.12.6, R 3.2.2
+* macOS Sonoma 14.2.1, R 4.3.2
 
 * Windows 10, R 3.4.3
 

@@ -1,0 +1,5 @@
+source/lib/*.dll
+source/lib/*.dylib
+source/lib/*.so
+make*.sh
+

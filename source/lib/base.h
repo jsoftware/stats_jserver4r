@@ -48,7 +48,7 @@ typedef struct BREP {
 // all fns callable from R are named "rjxxx"
 SEXP rjdo(SEXP);
 SEXP rjexec(SEXP);
-SEXP rjinit();
+SEXP rjinit(SEXP, SEXP, SEXP, SEXP);
 SEXP rjget(SEXP);
 SEXP rjgetr();
 SEXP rjset(SEXP, SEXP);

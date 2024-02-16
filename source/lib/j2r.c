@@ -37,7 +37,7 @@ C* box2char(B b)
 {
   I *s = b->s;
   I len = s[0];
-  C* d = (C*)(s + (I)(b->r));
+  C* d = (C*)b + b->d0;
   C* m=calloc(len+1, sizeof(char));
   strncpy(m,d,len);
   return m;
@@ -49,7 +49,7 @@ SEXP box2sexp(B b)
   I t=b->t;
   I r=(I)b->r;
   I* s=b->s;
-  I* d=s+r;
+  I* d= (I*)((C*)b+b->d0);
   return j2sexp(t,r,s,d);
 }
 

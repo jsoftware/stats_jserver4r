@@ -7,7 +7,7 @@
 #else
 #include <unistd.h>
 #include <dlfcn.h>
-#define GETPROCADDRESS(h,p)	dlsym(h,p)
+#define GETPROCADDRESS(h,p) dlsym(h,p)
 #endif
 
 #include "base.h"
@@ -28,8 +28,10 @@ static J jeload(C* pathdll)
 {
 #ifdef _WIN32
   WCHAR wpath[PLEN];
-  MultiByteToWideChar(CP_UTF8,0,pathdll,1+(int)strlen(pathdll),wpath,PLEN);
+  int rc = MultiByteToWideChar(CP_UTF8,0,pathdll,1+(int)strlen(pathdll),wpath,PLEN);
+  printf("jeload rc=%d pathdll=%s, wpath=%ls\n",rc, pathdll, wpath);
   hjdll=LoadLibraryW(wpath);
+  printf("jeload hjdll=%p\n",hjdll);
 #else
   hjdll=dlopen(pathdll,RTLD_LAZY);
 #endif
