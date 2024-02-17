@@ -10,7 +10,7 @@ For more information, see wiki page http://code.jsoftware.com/wiki/Interfaces/R/
 
 LABCATEGORY=: 'Stats'
 
-VERSION=: '1.0.7'
+VERSION=: '1.0.8'
 
 RELEASE=: 'j901'
 
